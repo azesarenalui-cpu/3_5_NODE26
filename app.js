@@ -28,6 +28,6 @@ app.post('/register', (req, res) => {
     const age = req.body.age;
     res.render('content', { lastname, firstname, age });
 });
-app.listen(8000, () => {
+app.listen(9000, () => {
     console.log("server is running on port");
 });
