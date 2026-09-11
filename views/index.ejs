@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fff, rgb(235, 159, 172));
+            padding: 20px;
+        }
+
+       
+        .content {
+            width: 100%;
+            max-width: 450px;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+       
+        .welcome {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        
+        .input-group label {
+            color: #666;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        
+        .input-group input {
+            width: 100%;
+            padding: 15px 18px;
+            background: #f5f6fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            color: #333;
+            transition: 0.3s ease;
+        }
+
+        
+        .input-group input:focus {
+            border-color: rgb(235, 159, 172);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(235, 159, 172, 0.2);
+        }
+
+        
+        .input-group input::placeholder {
+            color: #aaa;
+        }
+
+        
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px;
+            background: rgb(235, 159, 172);
+            color: white;
+            font-weight: bold;
+            border: 2px solid rgb(235, 159, 172);
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        
+        button:hover {
+            background: #fff;
+            color: rgb(235, 159, 172);
+        }
+
+        
+        @media (max-width: 480px) {
+            .content {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .input-group input {
+                padding: 13px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <h1>Registration Form</h1>
+
+        <p class="welcome">
+            Please enter your information below to register.
+        </p>
+
+        <form action="/register" method="POST">
+
+            <div class="input-group">
+                <label for="lastname">Last Name</label>
+                <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Enter your last name"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="firstname">First Name</label>
+                <input
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="Enter your first name"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    placeholder="Enter your age"
+                    min="1"
+                    max="120"
+                    required
+                >
+            </div>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

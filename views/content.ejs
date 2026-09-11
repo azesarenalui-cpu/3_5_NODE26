@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered User</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fff, rgb(235, 159, 172));
+            padding: 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 450px;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f5f6fa;
+            padding: 15px 18px;
+            border-radius: 10px;
+            border-left: 4px solid rgb(235, 159, 172);
+        }
+
+        .label {
+            color: #666;
+            font-weight: bold;
+        }
+
+        .value {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .welcome {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .info-box {
+                padding: 13px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h1>Registered User</h1>
+
+        <p class="welcome">
+            Here are your registered account details.
+        </p>
+
+        <div class="user-info">
+            <div class="info-box">
+                <span class="label">Last Name</span>
+                <span class="value"><%= lastname %></span>
+            </div>
+
+            <div class="info-box">
+                <span class="label">First Name</span>
+                <span class="value"><%= firstname %></span>
+            </div>
+
+            <div class="info-box">
+                <span class="label">Age</span>
+                <span class="value"><%= age %></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
